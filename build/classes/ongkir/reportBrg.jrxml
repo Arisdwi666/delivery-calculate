@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3b831be4-17f7-4a69-98ea-c634ea7c7c33">
+	<property name="ireport.zoom" value="2.1435888100000025"/>
+	<property name="ireport.x" value="538"/>
+	<property name="ireport.y" value="53"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     brg.`petugas` AS brg_petugas,
+     brg.`berat` AS brg_berat,
+     brg.`muatan` AS brg_muatan,
+     brg.`harga` AS brg_harga,
+     brg.`id_brg` AS brg_id_brg,
+     brg.`pengirim` AS brg_pengirim
+FROM
+     `brg` brg]]>
+	</queryString>
+	<field name="brg_petugas" class="java.lang.String"/>
+	<field name="brg_berat" class="java.lang.Double"/>
+	<field name="brg_muatan" class="java.lang.String"/>
+	<field name="brg_harga" class="java.lang.String"/>
+	<field name="brg_id_brg" class="java.lang.Integer"/>
+	<field name="brg_pengirim" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="255" y="0" width="400" height="35" uuid="ac700fa7-3fcf-4224-a8a4-aeaea16c0915"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Service Package]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="35" width="400" height="44" uuid="0bcf0303-7b90-4db8-badb-f30227c07a1e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jalan Raya Pati-Kayen, Kayen, Ronggo Kidul, Jatiroto, Pati, Jawa Tengah, 59171]]></text>
+			</staticText>
+			<image>
+				<reportElement x="157" y="0" width="98" height="79" uuid="19657297-2315-4fca-8d50-98711920b295"/>
+				<imageExpression><![CDATA["C:\\Aris Dwi\\Udinus\\Semester 4\\PBO\\UAS\\Jasakirim\\src\\img\\logo_dv.png"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement x="0" y="0" width="100" height="20" uuid="8f86a5f6-a1d5-4eb8-93c6-8de0ffb22b54"/>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="72" splitType="Stretch">
+			<staticText>
+				<reportElement x="525" y="52" width="30" height="20" uuid="5da1ba06-e208-4e04-b61b-c8aaecefd9fb"/>
+				<text><![CDATA[Pati,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="555" y="52" width="100" height="20" uuid="c97d4402-d5ed-4d24-b7af-edb5526e362c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="206" y="9" width="449" height="35" uuid="2e512770-f849-457c-9d82-2ba967517b81"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Form Ongkir]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="4" width="802" height="1" uuid="b4a3ef48-4ffd-4c0d-89ab-24dceb7a3c96"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<rectangle>
+				<reportElement x="157" y="0" width="100" height="20" uuid="724483aa-29a4-49c5-bd53-5b4a3bd3a2c8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="255" y="0" width="100" height="20" uuid="6568665e-61b4-4a52-b0b4-bcdd0176d921"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="355" y="0" width="100" height="20" uuid="a4056e77-698f-45fe-827a-20826922c537"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="455" y="0" width="100" height="20" uuid="fd23ab34-69c2-47e9-8425-42e746660233"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="555" y="0" width="100" height="20" uuid="8c996656-60b9-4085-89b8-d2405563136d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="555" y="0" width="100" height="20" uuid="aad64964-3413-47bf-a589-e6d800c82575"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[brg_harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="100" height="20" uuid="61af8fac-fa99-4475-afc9-99cf1490648a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[brg_muatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="0" width="100" height="20" uuid="df56928c-ba09-41ad-b12a-52588f435188"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[brg_berat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="0" width="100" height="20" uuid="e4734006-0be1-46a4-bb0b-19e2c93df370"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[brg_petugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="0" width="100" height="20" uuid="68f3c606-a076-4f0a-abd9-eefa038a7085"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[brg_pengirim]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<rectangle>
+				<reportElement x="157" y="0" width="98" height="20" uuid="de489365-304a-4f60-9e31-80cf47995ed9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="255" y="0" width="100" height="20" uuid="2b468786-a4ed-49d5-afe0-410bd17b50bf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="355" y="0" width="100" height="20" uuid="59293db4-cc9d-4850-95a8-fe989266fbe2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="455" y="0" width="100" height="20" uuid="3cdbeb5d-d122-416b-89bd-fb9dcecc3457"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="555" y="0" width="100" height="20" uuid="586f7d60-a4e2-428f-b798-1f9ce7747c57"/>
+			</rectangle>
+			<textField>
+				<reportElement x="171" y="0" width="71" height="20" uuid="f7314904-0f04-418e-a96b-13b12f9d6544"/>
+				<textFieldExpression><![CDATA[$F{brg_pengirim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="272" y="0" width="67" height="20" uuid="6012a0f9-efc7-41ef-83fa-64ff423385ca"/>
+				<textFieldExpression><![CDATA[$F{brg_petugas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="0" width="67" height="20" uuid="d3f61828-5ec0-4789-9b85-195019861d14"/>
+				<textFieldExpression><![CDATA[$F{brg_berat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="471" y="0" width="70" height="20" uuid="0c872919-bca0-4b4e-a95a-db52e87e460a"/>
+				<textFieldExpression><![CDATA[$F{brg_muatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="566" y="1" width="89" height="19" uuid="8f3faceb-028c-4d24-885a-9d3cc18c7374"/>
+				<textFieldExpression><![CDATA[$F{brg_harga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="555" y="5" width="100" height="20" uuid="4f3e5213-b575-4ae9-9edc-882361d64dbb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Tanda Tangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="555" y="53" width="100" height="20" uuid="4358afca-458d-4e16-aac4-27edbe55daed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nama Terang]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
